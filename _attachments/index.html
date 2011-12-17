@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Graf</title>
+    <link rel="stylesheet" href="style/main.css" type="text/css">
+  </head>
+  <body>
+
+    <h1>Graf</h1>
+
+    <div id="content"></div>
+
+  </body>
+  <script src="/_utils/script/sha1.js"></script>
+  <script src="/_utils/script/json2.js"></script>
+  <script src="/_utils/script/jquery.js"></script>
+  <script src="/_utils/script/jquery.couch.js"></script>
+  <script src="vendor/couchapp/jquery.couchLogin.js"></script>
+  <script src="vendor/couchapp/jquery.couchProfile.js"></script>
+  <script src="vendor/couchapp/md5.js"></script>
+  <script src="vendor/couchapp/jquery.mustache.js"></script>
+
+<!-- templates used by app.js -->
+
+  <script id="recent-pictures" type="text/x-mustache" charset="utf-8">
+        <h3>Recent Pictures</h3>
+        <ul id="items">
+          {{#items}}
+            <li>
+              <div class="picture">
+                  <img src="../../{{id}}/snapshot.png" alt="{{name}}"/>
+              </div>
+              <p>{{text_result}}</p>
+              <div style="clear:left;"></div>
+            </li>
+          {{/items}}
+        </ul>
+  </script>
+  <script src="script/app.js"></script>
+
+</html>
