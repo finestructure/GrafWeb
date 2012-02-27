@@ -48,7 +48,7 @@ $(function() {
         if (e.keyCode == 13 ) {
             this.blur();
         };
-    };
+    });
     $("li [type=text]").live("blur", function(e) {
         var li = $(this).parents("li")
         li.children("[class=form]").hide();
