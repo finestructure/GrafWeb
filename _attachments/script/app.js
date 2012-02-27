@@ -44,6 +44,11 @@ $(function() {
         form.find("[type=text]").focus();
     });
     // hide form when text input field no longer has the focus
+    $("li [type=text]").live("keyup", function(e) {
+        if (e.keyCode == 13 ) {
+            this.blur();
+        };
+    };
     $("li [type=text]").live("blur", function(e) {
         var li = $(this).parents("li")
         li.children("[class=form]").hide();
