@@ -26,12 +26,21 @@
         <h3>Recent Pictures</h3>
         <ul id="items">
           {{#items}}
-            <li>
-              <div class="picture">
-                  <img src="../../{{id}}/snapshot.png" alt="{{name}}"/>
+          <li id="{{id}}">
+              <div class="no-form">
+                  <div class="picture">
+                      <img src="../../{{id}}/snapshot.png" alt="{{name}}"/>
+                  </div>
+                  <p>{{text_result}}</p>
+                  <div style="clear:left;"></div>
               </div>
-              <p>{{text_result}}</p>
-              <div style="clear:left;"></div>
+              <div class="form" style="display:none">
+                  <div class="picture" >
+                      <img src="../../{{id}}/snapshot.png" alt="{{name}}"/>
+                  </div>
+                  <p><input name="text" type="text" size="30" value="{{text_result}}"/></p>
+                  <div style="clear:left;"></div>
+              </div>
             </li>
           {{/items}}
         </ul>
